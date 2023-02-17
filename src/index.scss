@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --first-color: hsl(225, 50%, 48%);
+  --secondary-color: hsl(180, 17%, 95%);
+  --color-one: hsl(15, 74%, 70%);
+  --color-two: hsl(28, 100%, 82%);
+  --hover-color: hsl(225, 56%, 59%);
+  --white-color: hsl(0, 0%, 100%);
+  --white-color-alt: hsl(0, 0%, 93%);
+  --black-color: hsl(0, 0%, 12%);
+  --text-color: hsl(240, 1%, 48%);
+  --border-color: hsl(0, 0, 83%);
+  --grey-bg: hsl(0, 0%, 96%);
+  --grey-text: rgb(145, 145, 145);
+  --input-color: hsl(330, 12%, 97%);
+  --box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --transition: 4s ease-in-out;
+}
+
+body {
+  background-color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.gird {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--first-color);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  color: var(--white-color);
+  a {
+    color: var(--white-color);
+    font-weight: 500;
+  }
+  &:hover {
+    background-color: var(--hover-color);
+  }
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+  color: var(--grey-text);
+}
+
+h4 {
+  padding: 1rem 0;
+  font-weight: var(--black-color);
+}
+
+h2 {
+  font-size: 25px;
+  padding: 1rem 0;
+  color: var(--black-color);
+}
+
+// navBar section styling
+.navBar {
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  z-index: 10;
+
+  .navBarOne,
+  .navBarTwo {
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .navBarOne {
+    background-color: var(--secondary-color);
+
+    .icon:hover {
+      color: var(--first-color);
+    }
+
+    .atb {
+      gap: 1rem;
+      span {
+        color: var(--black-color);
+        font-size: 11px;
+        cursor: pointer;
+
+        &:hover {
+          color: var(--first-color);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .navBarTwo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 3rem;
+    padding: 1.5rem 1rem;
+    position: fixed;
+    transition: 0.3s ease-in-out;
+
+    .logoDiv {
+      .logo {
+        width: 20%;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .navBarMenu {
+        position: absolute;
+        background-color: var(--secondary-color);
+        padding: 3.5rem;
+        border-radius: 10px;
+        top: 5rem;
+        right: -50%;
+        transform: translateX(50%);
+        z-index: 100;
+        box-shadow: var(--box-shadow);
+        border: 3px solid var(--white-color);
+        transition: 0.3s ease-in-out;
+
+        .menu {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          text-align: center;
+
+          .listItem {
+            padding: 0.5rem 0;
+            cursor: pointer;
+            color: var(--black-color);
+
+            &:hover {
+              color: var(--first-color);
+              font-weight: 600;
+            }
+          }
+        }
+        .btnOne {
+          display: flex;
+          justify-content: center;
+          margin: auto;
+          margin-top: 1rem;
+        }
+      }
+      .btnTwo {
+        display: none;
+      }
+    }
+    .toggleIcon {
+      .icon {
+        font-size: 30px;
+        color: var(--black-color);
+      }
+    }
+
+    .showNavBar {
+      right: 50%;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
