@@ -25,9 +25,7 @@ const NavBar: FC = () => {
     }
   }
 
-  window.addEventListener('scroll', addBgColor);
-
-
+  window.addEventListener('scroll', addBgColor)
 
   return (
     <div className="navBar flex">
