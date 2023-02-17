@@ -16,6 +16,19 @@ const NavBar: FC = () => {
     setActive('navBarMenu')
   }
 
+  const [bg, setBg] = useState<string>('navBarTwo')
+  const addBgColor = () => {
+    if (window.scrollY >= 10) {
+      setBg('navBarTwo navBarWithBg')
+    } else {
+      setBg('navBarTwo')
+    }
+  }
+
+  window.addEventListener('scroll', addBgColor);
+
+
+
   return (
     <div className="navBar flex">
       <div className="navBarOne flex">
@@ -35,7 +48,7 @@ const NavBar: FC = () => {
           <span>Sign out</span>
         </div>
       </div>
-      <div className="navBarTwo flex">
+      <div className={bg}>
         <div className="logoDiv">
           <img src={logo} alt="" className="Logo" />
         </div>
