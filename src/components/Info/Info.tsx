@@ -6,7 +6,7 @@ const Info: FC = () => {
   return (
     <div className="info section">
       <div className="infoContainer container">
-        <div className="titleDiv flex">
+        <div className="titlesDiv flex">
           <h2>Travel to make memories all around the world</h2>
           <button className="btn">View All</button>
         </div>

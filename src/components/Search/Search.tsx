@@ -18,7 +18,7 @@ const Search: FC = () => {
             <span>First Class</span>
           </div>
         </div>
-        <div className="searchInputs flex grid">
+        <div className="searchInputs flex">
           <div className="singleInput flex">
             <div className="iconDiv">
               <HiOutlineLocationMarker className="icon" />

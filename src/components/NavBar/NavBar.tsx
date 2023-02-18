@@ -33,7 +33,7 @@ const NavBar: FC = () => {
         <div>
           <SiConsul className="icon" />
         </div>
-        <div className="flex">
+        <div className="none flex">
           <li className="flex">
             <BsPhoneVibrate /> Support
           </li>

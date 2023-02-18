@@ -1,7 +1,13 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import gridImage from '../../assets/grid-01.png'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 const Support: FC = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
   return (
     <div className="support container section">
       <div className="sectionContainer">
@@ -41,7 +47,8 @@ const Support: FC = () => {
               </p>
             </div>
           </div>
-          <div className="imgDiv">
+          <div className="imgDiv"  data-aos="fade-up"
+          data-aos-duration="2500">
             <img src={gridImage} alt="" />
           </div>
         </div>

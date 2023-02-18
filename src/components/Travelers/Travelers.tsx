@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import bali from '../../assets/bali.jpg'
 import egypt from '../../assets/egypt.jpg'
 import france from '../../assets/france.jpg'
@@ -9,14 +9,21 @@ import traveler2 from '../../assets/traveler02.jpeg'
 import traveler3 from '../../assets/traveler03.jpeg'
 import traveler4 from '../../assets/traveler04.jpeg'
 
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+
 const Travelers: FC = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 })
+  }, [])
   return (
     <div className="travelers container section">
       <div className="sectionContainer">
         <h2>Top travelers of this month!</h2>
 
         <div className="travelersContainer grid">
-          <div className="singleTraveler">
+          <div className="singleTraveler" data-aos="fade-up"
+          data-aos-duration="2500">
             <img src={france} alt="" className="destinationImage" />
             <div className="traverlerDetails">
               <div className="travelerPicture">
@@ -28,7 +35,8 @@ const Travelers: FC = () => {
               </div>
             </div>
           </div>
-          <div className="singleTraveler">
+          <div className="singleTraveler" data-aos="fade-up"
+          data-aos-duration="2500">
             <img src={dubai} alt="" className="destinationImage" />
             <div className="traverlerDetails">
               <div className="travelerPicture">
@@ -40,7 +48,8 @@ const Travelers: FC = () => {
               </div>
             </div>
           </div>
-          <div className="singleTraveler">
+          <div className="singleTraveler" data-aos="fade-up"
+          data-aos-duration="2500">
             <img src={bali} alt="" className="destinationImage" />
             <div className="traverlerDetails">
               <div className="travelerPicture">
@@ -52,7 +61,8 @@ const Travelers: FC = () => {
               </div>
             </div>
           </div>
-          <div className="singleTraveler">
+          <div className="singleTraveler" data-aos="fade-up"
+          data-aos-duration="2500">
             <img src={egypt} alt="" className="destinationImage" />
             <div className="traverlerDetails">
               <div className="travelerPicture">
