@@ -7,7 +7,7 @@ const Search: FC = () => {
   return (
     <div className="search container section">
       <div className="sectionContainer grid">
-        <div className="btn flex">
+        <div className="btns flex">
           <div className="singleBtn">
             <span>Business Class</span>
           </div>
@@ -18,7 +18,7 @@ const Search: FC = () => {
             <span>First Class</span>
           </div>
         </div>
-        <div className="searchInputs flex">
+        <div className="searchInputs flex grid">
           <div className="singleInput flex">
             <div className="iconDiv">
               <HiOutlineLocationMarker className="icon" />

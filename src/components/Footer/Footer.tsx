@@ -80,6 +80,14 @@ const Footer: FC = () => {
           </li>
         </div>
       </div>
+      <div className="copyrightDiv flex">
+        <p>
+          Designed & Developed by{' '}
+          <a href="https://nipunaupeksha.github.io" target="_blank">
+            Nipuna Upeksha
+          </a>
+        </p>
+      </div>
     </div>
   )
 }
